@@ -17,15 +17,19 @@ const Navbar = () => {
   ];
 
   return (
-    <nav>
-      <div onClick={handleMenu} className="md:hidden">
+    <nav className="text-black">
+      <div onClick={handleMenu} className="md:hidden bg-slate-500 ">
         {isOpen ? (
-          <IoMdClose className="text-2xl text-red-500 " />
+          <IoMdClose className="text-2xl text-red-500 cursor-pointer " />
         ) : (
-          <CiMenuFries className="text-2xl text-green-400" />
+          <CiMenuFries className="text-2xl text-green-400 cursor-pointer" />
         )}
       </div>
-      <ul>
+      <ul
+        className={`md:flex md:static absolute  bg-stone-50 px-6 shadow-lg duration-1000 ${
+          isOpen ? "start-0" : "-start-40"
+        }`}
+      >
         {routes.map((route) => (
           <Link key={route.id} route={route}></Link>
         ))}
