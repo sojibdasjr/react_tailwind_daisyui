@@ -17,7 +17,7 @@ const Navbar = () => {
   ];
 
   return (
-    <nav className="text-black">
+    <nav className="text-black p-5 bg-slate-200 ">
       <div onClick={handleMenu} className="md:hidden bg-slate-500 ">
         {isOpen ? (
           <IoMdClose className="text-2xl text-red-500 cursor-pointer " />

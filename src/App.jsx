@@ -1,3 +1,4 @@
+import LineChart from "./components/LineChart";
 import Navbar from "./components/Navbar";
 import PriceOptions from "./components/PriceOptions";
 
@@ -29,6 +30,8 @@ function App() {
       </div>
       {/* Price table */}
       <PriceOptions />
+      {/* Line chart */}
+      <LineChart />
     </>
   );
 }
